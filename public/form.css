@@ -1,0 +1,136 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #F4F7FB;  /* Light Grayish-Blue for a fresh and modern background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Main Heading Styling */
+.main-heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: #5965A6;  /* Slate Blue for a calm and strong look */
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;  /* Uppercase for modernity */
+}
+
+/* Form Wrapper for Flexbox */
+.form-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;  /* Maximum width to keep forms from expanding too much */
+    padding: 0 20px;
+}
+
+/* Form Container Styling */
+.form-container {
+    background: #FFFFFF;  /* Clean white background for contrast */
+    padding: 20px;
+    border-radius: 12px;  /* Slightly larger rounded corners */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);  /* Softer shadow for depth */
+    flex: 1;
+    margin: 20px;
+    min-width: 280px;
+    box-sizing: border-box;  /* Ensure padding and margins are included in the width */
+}
+
+/* Ensure form fields are aligned properly */
+.grid-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;  /* Increased gap for a cleaner layout */
+}
+
+/* Styling for inputs and labels */
+.grid-form label {
+    color: #2D2D2D;  /* Dark gray for text */
+    font-weight: bold;
+}
+
+.grid-form input {
+    padding: 12px;
+    border: 1px solid #D8C4E9;  /* Soft Lavender border */
+    border-radius: 8px;  /* Slightly rounded inputs */
+    font-size: 15px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.grid-form input:focus {
+    border-color: #5965A6;  /* Slate Blue on focus */
+    outline: none;  /* Remove default outline */
+}
+
+/* Submit Button Styling */
+.form-submit {
+    grid-column: span 2;
+    text-align: center;
+    margin-top: 25px;
+}
+
+button {
+    padding: 14px 40px;
+    background-color: #2F8F83;  /* Teal for a fresh, modern button color */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;  /* Rounded button */
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #276A62;  /* Darker Teal on hover */
+    transform: translateY(-2px);  /* Slight lift effect on hover */
+}
+
+/* Responsive Styles */
+
+/* Adjust layout dynamically for screens smaller than 1024px */
+@media (max-width: 1024px) {
+    .form-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-container {
+        max-width: 100%;  /* Allow form containers to take full width */
+    }
+
+    .grid-form {
+        grid-template-columns: 1fr;  /* Stack form fields vertically */
+    }
+}
+
+/* Further adjustments for smaller screens below 768px */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .grid-form {
+        gap: 15px;  /* Smaller gaps for mobile screens */
+    }
+
+    button {
+        width: 100%;  /* Full-width button for smaller screens */
+        font-size: 16px;
+    }
+
+    .main-heading {
+        font-size: 28px;  /* Slightly smaller heading for mobile */
+    }
+}
+

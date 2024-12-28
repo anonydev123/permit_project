@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Permit and Transit Details</title>
+</head>
+<style>
+   embed {
+      margin-top: 30px;
+      width: 100%;
+      height: 600px;
+      border: 1px solid #000;
+    }
+</style>
+<body>
+<table>
+<tbody>
+<tr>
+<td style="width:50%;border: 1px solid #000;">
+<h1>PERMIT DETAILS</h1><br>
+Permit#: <%= data.permit_number %><br>
+Module: <%= data.module %><br>
+Validity: <%= data.validity_from %> - <%= data.validity_till %><br>
+Item[s]: <%= data.items %><br>
+Qty(s): <%= data.quantity %><br>
+Value: <%= data.value %><br>
+MMCA Name: <%= data.mmca_name %><br>
+Name: Argeng Narzary<br>
+Mobile: 9678413649<br>
+Division: Kachugon<br>
+Range/Beat: Gossaigaon Forest Depot<br>
+Kist#: <%= data.kist %> <br>
+<td style="width:50%;border: 1px solid #000;">
+<h1>TRANSIT DETAILS</h1><br> 
+eTP No:  <%= data.etp_number %><br>
+Module: <%= data.transit_module %><br>
+Item: <%= data.transit_item %><br>
+Qty: <%= data.transit_quantity %><br>
+Mahal: <%= data.mahal %><br>
+Dest: <%= data.destination %><br>
+Valid From: <%= data.valid_from_date %> at <%= data.valid_from_time %><br>
+Valid To: <%= data.valid_to_date %> at <%= data.valid_to_time %><br>
+Veh#: <%= data.vehicle_number %><br>
+Driver Info: <%= data.driver_info %><br>
+Division: <%= data.transit_division %><br>
+Range/Beat: <%= data.transit_range %><br>
+Permit#: <%= data.transit_permit_number %><br>
+</tr>
+</tbody>
+</table>
+<div class="row">
+  <p id="verifymsg" style="font-weight: bolder; text-align: center;">
+    <q class="text-success">
+      This e-TP was used and verified by Division on 
+    </q>
+  </p>
+</div>
+<div class="form-group" id="etp_verify_details">
+  <div class="col-sm-12">
+    <div class="row">
+      <div class="col-md-2">
+                <b>Transit Status : </b>
+              </div>
+              <div class="col-md-4">
+                <span id="transit_status" class="bg-success">PENDING</span>
+              </div>
+              <div class="col-md-2">
+                <b>Verified By : </b>
+              </div>
+              <div class="col-md-4">
+                <span id="verified_by"> - Role: </span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <b>Verified Date : </b>
+              </div>
+              <div class="col-md-4">
+                <span id="verified_date"></span>
+              </div>
+              <div class="col-md-2">
+                <b>Reason : </b>
+              </div>
+              <div class="col-md-4">
+                <span id="verified_reason"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+    <!-- PDF Preview -->
+    <embed src="/pdf/<%= data.id %>" type="application/pdf" />
+  </div>
+</body>
+</html>

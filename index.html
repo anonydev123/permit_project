@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permit and Transit Forms</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <!-- Main Heading for the Page -->
+    <header>
+        <h1 class="main-heading">P&T FOR Business</h1>
+    </header>
+    
+    <div class="form-wrapper">
+        <!-- Single form element wrapping both Permit and Transit details -->
+        <form class="grid-form" action="http://localhost:3001/submit_form" method="POST">
+            <form action="http://localhost:3001/submit_form" method="POST">
+
+
+            <!-- Permit Details Form -->
+            <div class="form-container">
+                <h2>Permit Details</h2>
+                <label for="permit_number">Permit Number #:</label>
+                <input type="text" id="permit_number" name="permit_number" required pattern="[A-Za-z0-9]+" title="Only alphanumeric characters allowed.">
+
+                <label for="module">Module:</label>
+                <input type="text" id="module" name="module" required>
+
+                <label for="validity_from">Validity - Date From:</label>
+                <input type="date" id="validity_from" name="validity_from" required>
+
+                <label for="validity_till">Validity - Date Till:</label>
+                <input type="date" id="validity_till" name="validity_till" required>
+
+                <label for="time_from">Time From:</label>
+                <input type="time" id="time_from" name="time_from" required>
+
+                <label for="time_till">Time Till:</label>
+                <input type="time" id="time_till" name="time_till" required>
+
+                <label for="items">Item(s):</label>
+                <input type="text" id="items" name="items" required>
+
+                <label for="quantity">Quantity(s):</label>
+                <input type="number" id="quantity" name="quantity" required>
+
+                <label for="value">Value:</label>
+                <input type="text" id="value" name="value" required>
+
+                <label for="mmca_name">MMCA Name:</label>
+                <input type="text" id="mmca_name" name="mmca_name" required>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <!-- Address field added below Name -->
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="mobile">Mobile:</label>
+                <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}" title="10-digit phone number required.">
+
+                <label for="division">Division:</label>
+                <input type="text" id="division" name="division" required>
+
+                <label for="range">Range/Beat:</label>
+                <input type="text" id="range" name="range" required>
+
+                <label for="kist">Kist #:</label>
+                <input type="text" id="kist" name="kist" required>
+            </div>
+
+            <!-- Transit Details Form -->
+            <div class="form-container">
+                <h2>Transit Details</h2>
+                <label for="etp_number">eTP Number:</label>
+                <input type="text" id="etp_number" name="etp_number" required pattern="[A-Za-z0-9]+" title="Only alphanumeric characters allowed.">
+
+                <label for="transit_module">Module:</label>
+                <input type="text" id="transit_module" name="transit_module" required>
+
+                <label for="transit_item">Item:</label>
+                <input type="text" id="transit_item" name="transit_item" required>
+
+                <label for="transit_quantity">Quantity:</label>
+                <input type="number" id="transit_quantity" name="transit_quantity" required>
+
+                <label for="mahal">Mahal:</label>
+                <input type="text" id="mahal" name="mahal" required>
+
+                <label for="destination">Destination (Dest):</label>
+                <input type="text" id="destination" name="destination" required>
+
+                <label for="valid_from_date">Valid From - Date:</label>
+                <input type="date" id="valid_from_date" name="valid_from_date" required>
+
+                <label for="valid_from_time">Valid From - Time:</label>
+                <input type="time" id="valid_from_time" name="valid_from_time" required>
+
+                <label for="valid_to_date">Valid To - Date:</label>
+                <input type="date" id="valid_to_date" name="valid_to_date" required>
+
+                <label for="valid_to_time">Valid To - Time:</label>
+                <input type="time" id="valid_to_time" name="valid_to_time" required>
+
+                <label for="vehicle_number">Vehicle Number #:</label>
+                <input type="text" id="vehicle_number" name="vehicle_number" required pattern="[A-Za-z0-9]+" title="Only alphanumeric characters allowed.">
+
+                <label for="driver_info">Driver Information:</label>
+                <input type="text" id="driver_info" name="driver_info" required>
+
+                <label for="transit_division">Division:</label>
+                <input type="text" id="transit_division" name="transit_division" required>
+
+                <label for="transit_range">Range/Beat:</label>
+                <input type="text" id="transit_range" name="transit_range" required>
+
+                <label for="transit_permit_number">Permit Number #:</label>
+                <input type="text" id="transit_permit_number" name="transit_permit_number" required>
+            </div>
+
+            <!-- Submit Button for both Permit and Transit Forms -->
+            <div class="form-submit">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
